@@ -6,7 +6,7 @@
 
 const int BISPO = 5, TORRE = 5, RAINHA = 8;
 
-int main() {
+int main(){
 
     int i = 0, resp = 0;
 
@@ -16,7 +16,8 @@ int main() {
         printf("1. Bispo\n");
         printf("2. Torre\n");
         printf("3. Rainha\n");
-        printf("4. Sair\n\n");
+        printf("4. Cavalo\n");
+        printf("5. Sair\n\n");
         scanf("%d", &resp);
 
             switch (resp)
@@ -48,19 +49,35 @@ int main() {
                     }
                 break;
 
-            case 4: //opção de saída
+            case 4: //movimentação do cavalo
+                printf("\nMovimentando Cavalo...\n\n");
+
+                    int i = 1;
+                    while (i <= 1)
+                    {
+                        for (int j = 0; j <= i; j++)
+                        {
+                            printf("Baixo\n");
+                        }
+                        i++;
+                        printf("Esquerda\n");
+                    }
+                break;
+
+            case 5: //opção de saída
 
                         printf("Saindo...\n");
                     
                 break;
-            
+
             default:
 
                 printf("Opção inválida!\n");
                 break;
             }
                   
-    } while (resp != 4);
+    } while (resp != 5);
+}
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
@@ -72,6 +89,3 @@ int main() {
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
-
-    return 0;
-}
